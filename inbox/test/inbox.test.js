@@ -29,7 +29,7 @@ beforeEach(async () => {
     // Instruct web3 to send out a transaction that creates this contract
     .send({
       from: accounts[0],
-      gas: 1_000_000
+      gas: `${1_000_000}`
     })
 })
 
