@@ -3,6 +3,11 @@ pragma solidity ^0.4.17;
 contract Lottery {
     address public manager;
     address[] public players;
+
+    function Lottery() public {
+        // @global: "msg" is a global variable
+        manager = msg.sender;
+    }
     
     // Create a modifier called "restricted"
     // To refractor repeated logic inside a function
@@ -10,11 +15,6 @@ contract Lottery {
         require(msg.sender == manager);
         // This underscore will be replaced by the body code of the applied function
         _;
-    }
-    
-    function Lottery() public {
-        // @global: "msg" is a global variable
-        manager = msg.sender;
     }
     
     function enter() public payable {
