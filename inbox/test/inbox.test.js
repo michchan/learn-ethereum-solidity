@@ -33,8 +33,8 @@ beforeEach(async () => {
     })
 })
 
-describe('Inbox', () => {
-  it('deploys a contract', () => {
+describe('Inbox Contract', () => {
+  it('can be deployed', () => {
     // .ok means "exists/isDefined"
     assert.ok(inbox.options.address)
   })
